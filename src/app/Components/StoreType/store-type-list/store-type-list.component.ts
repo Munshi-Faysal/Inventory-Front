@@ -6,6 +6,7 @@ import { GridHandlerService } from 'src/app/Services/GridHandler.service';
 import { HttpClientConnectionService } from 'src/app/Services/HttpClientConnection.service';
 // import * as CryptoJS from 'crypto-js';
 import * as CryptoJS from 'crypto-js';
+import { GridButtonShow, GridCaption, GridDataShow } from 'src/app/Models/GridModels';
 
 @Component({
   selector: 'app-store-type-list',
@@ -16,7 +17,7 @@ export class StoreTypeListComponent {
   isShow: boolean = true;
   dataList: StoreType[] = [];
   FormData:StoreType = new StoreType();
-  routerData:any;
+  ///routerData:any;
 
   constructor(
     // public service:FloorService,
@@ -31,14 +32,7 @@ export class StoreTypeListComponent {
    this.commonService.data$.subscribe(newData => {
     this.edit(newData);
   });
-  this.route.queryParams.subscribe(params => {
-    if(params){
-      const bytes = CryptoJS.AES.decrypt(params['values'], "values");
-      this.routerData =JSON.parse(bytes.toString(CryptoJS.enc.Utf8)); 
-    }else{
-      
-    }
-})
+
   }
   ShowHideEvent() {
 
@@ -63,27 +57,21 @@ export class StoreTypeListComponent {
   sendDataCommonGrid(){
     this.commonService.dataList=[];
     //Grid Caption 
+    this.commonService.caption = new GridCaption();
        this.commonService.caption.caption1="Floor ID";
        this.commonService.caption.caption2="Floor Name";
        this.commonService.caption.caption3="Company ID";
   
       //PermitForShow or Not
-       this.commonService.isShowData.caption1=false;
+      this.commonService.isShowData = new GridDataShow()
        this.commonService.isShowData.caption2=true;
-       this.commonService.isShowData.caption3=false;
-       this.commonService.isShowData.caption4=false;
-       this.commonService.isShowData.caption5=false;
-       this.commonService.isShowData.caption6=false;
-       this.commonService.isShowData.caption7=false;
-       this.commonService.isShowData.caption8=false;
-       this.commonService.isShowData.caption9=false;
-       this.commonService.isShowData.caption10=false;
 
 
        //Permit For Button Show or Not
-       this.commonService.isShowButton.button1=this.routerData.isEdit; //edit
-       this.commonService.isShowButton.button2=this.routerData.isView; //delete
-       this.commonService.isShowButton.button3=this.routerData.isDelete;
+       this.commonService.isShowButton =new GridButtonShow()
+       this.commonService.isShowButton.button1=true //edit
+       this.commonService.isShowButton.button2=true //delete
+       this.commonService.isShowButton.button3=true
         this.commonService.isShowButton.button4=false;
       
        //Grid Data 

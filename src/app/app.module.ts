@@ -62,6 +62,8 @@ import { StoreTypeListComponent } from './Components/StoreType/store-type-list/s
 import { StoreTypeFormComponent } from './Components/StoreType/store-type-form/store-type-form.component';
 import { CommonDataGridComponent } from './CommonComponents/CommonDataGrid/common-data-grid.component';
 import { CommonDataGridWithCheckBoxComponent } from './CommonComponents/CommonDataGridWithCheckBox/common-data-grid-with-check-box.component';
+import { ButtonControlComponent } from './CommonComponents/button-control/button-control.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -84,7 +86,8 @@ import { CommonDataGridWithCheckBoxComponent } from './CommonComponents/CommonDa
     StoreTypeListComponent,
     StoreTypeFormComponent,
     CommonDataGridComponent,
-    CommonDataGridWithCheckBoxComponent
+    CommonDataGridWithCheckBoxComponent,
+    ButtonControlComponent
   ],
   imports: [
     BrowserModule,
@@ -126,7 +129,8 @@ import { CommonDataGridWithCheckBoxComponent } from './CommonComponents/CommonDa
   DxLoadIndicatorModule,
   DxTabPanelModule,
   DxSortableModule,
-  HttpClientModule
+  HttpClientModule,
+  ToastrModule.forRoot()
 ],
   providers: [],
   bootstrap: [AppComponent]

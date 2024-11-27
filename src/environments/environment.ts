@@ -4,7 +4,7 @@ export const environment = {
   //Development Environment on 26-11-2024
   appVersion: packageInfo.version,
   production: false,
-  apiUrl: 'https://localhost:7136/api',
+  apiUrl: 'https://localhost:7136/api/',
   reportUrl:'https://localhost:7136/',
   uploadFileUrl:'D:/project/Inventory-Front/src/assets/images/uploadedImages'
 
