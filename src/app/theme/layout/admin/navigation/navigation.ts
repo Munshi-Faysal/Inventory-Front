@@ -34,6 +34,55 @@ export const NavigationItems: NavigationItem[] = [
       }
     ]
   },
+
+  {
+    id: 'settings-component',
+    title: 'Settings',
+    type: 'group',
+    icon: 'icon-group',
+    children: [
+      {
+        id: 'userManager',
+        title: 'User Manager',
+        type: 'collapse',
+        icon: 'feather icon-box',
+        children: [
+          {
+            id: 'business',
+            title: 'Business',
+            type: 'item',
+            url: '/component/breadcrumb-paging'
+          },
+          {
+            id: 'user',
+            title: 'User',
+            type: 'item',
+            url: '/component/button'
+          },
+          {
+            id: 'role',
+            title: 'Role',
+            type: 'item',
+            url: '/component/badges'
+          },  
+          {
+            id: 'businessPermission',
+            title: 'Business Permission',
+            type: 'item',
+            url: '/component/tabs-pills'
+          },        
+          {
+            id: 'menuPermission',
+            title: 'Menu Permission',
+            type: 'item',
+            url: '/component/collapse'
+          }     
+          
+        ]
+      }
+    ]
+  },
+
   {
     id: 'ui-component',
     title: 'Ui Component',
