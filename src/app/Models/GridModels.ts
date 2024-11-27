@@ -20,16 +20,16 @@ export class GridDataShow {
   }
 
   export class GridDataModel {
-    dataField1: string = '';
-    dataField2: string = '';
-    dataField3: string = '';
-    dataField4: string = '';
-    dataField5: string = '';
-    dataField6: string = '';
-    dataField7: string = '';
-    dataField8: string = '';
-    dataField9: string = '';
-    dataField10: string = '';
+    dataField1: any = '';
+    dataField2: any = '';
+    dataField3: any = '';
+    dataField4: any = '';
+    dataField5: any = '';
+    dataField6: any = '';
+    dataField7: any = '';
+    dataField8: any = '';
+    dataField9: any = '';
+    dataField10: any = '';
   }
   export class GridCaption {
     caption1: string = '';

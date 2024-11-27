@@ -23,6 +23,45 @@ import { NavCollapseComponent } from './theme/layout/admin/navigation/nav-conten
 import { NavGroupComponent } from './theme/layout/admin/navigation/nav-content/nav-group/nav-group.component';
 import { NavItemComponent } from './theme/layout/admin/navigation/nav-content/nav-item/nav-item.component';
 import { SharedModule } from './theme/shared/shared.module';
+import {
+  DxButtonModule,
+  DxCheckBoxModule,
+  DxDataGridModule,
+  DxFormModule,
+  DxListModule,
+  DxPopupModule,
+  DxSelectBoxModule,
+  DxTemplateModule,
+  DxTextAreaModule,
+  DxTextBoxModule,
+  DxTooltipModule,
+  DxTreeViewModule,
+  DxDateBoxModule,
+  DxTagBoxModule,
+  DxSchedulerModule,
+  DxLoadPanelModule,
+  DevExtremeModule,
+  DxAccordionModule,
+  DxDropDownBoxModule,
+  DxScrollViewModule,
+  DxContextMenuModule, 
+  DxDrawerModule,
+  DxRadioGroupModule,
+  DxTabsModule,
+  DxChartModule,
+  DxActionSheetModule,
+  DxFileUploaderModule, 
+  DxProgressBarModule,
+  DxPopoverModule, 
+  DxLoadIndicatorModule,
+  DxTabPanelModule,
+  DxSortableModule
+} from 'devextreme-angular';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreTypeListComponent } from './Components/StoreType/store-type-list/store-type-list.component';
+import { StoreTypeFormComponent } from './Components/StoreType/store-type-form/store-type-form.component';
+import { CommonDataGridComponent } from './CommonComponents/CommonDataGrid/common-data-grid.component';
+import { CommonDataGridWithCheckBoxComponent } from './CommonComponents/CommonDataGridWithCheckBox/common-data-grid-with-check-box.component';
 
 @NgModule({
   declarations: [
@@ -41,9 +80,54 @@ import { SharedModule } from './theme/shared/shared.module';
     NavContentComponent,
     NavItemComponent,
     NavCollapseComponent,
-    NavGroupComponent
+    NavGroupComponent,
+    StoreTypeListComponent,
+    StoreTypeFormComponent,
+    CommonDataGridComponent,
+    CommonDataGridWithCheckBoxComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+     AppRoutingModule, 
+     BrowserAnimationsModule,
+     SharedModule, 
+     FormsModule,
+      ReactiveFormsModule,
+       BrowserAnimationsModule,
+       DxButtonModule,
+  DxCheckBoxModule,
+  DxDataGridModule,
+  DxFormModule,
+  DxListModule,
+  DxPopupModule,
+  DxSelectBoxModule,
+  DxTemplateModule,
+  DxTextAreaModule,
+  DxTextBoxModule,
+  DxTooltipModule,
+  DxTreeViewModule,
+  DxDateBoxModule,
+  DxTagBoxModule,
+  DxSchedulerModule,
+  DxLoadPanelModule,
+  DevExtremeModule,
+  DxAccordionModule,
+  DxDropDownBoxModule,
+  DxScrollViewModule,
+  DxContextMenuModule, 
+  DxDrawerModule,
+  DxRadioGroupModule,
+  DxTabsModule,
+  DxChartModule,
+  DxActionSheetModule,
+  DxFileUploaderModule, 
+  DxProgressBarModule,
+  DxPopoverModule, 
+  DxLoadIndicatorModule,
+  DxTabPanelModule,
+  DxSortableModule,
+  HttpClientModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
